@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-sans: 'Pretendard Variable', 'SUIT Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Colors - Brand */
+  --color-primary: #E5A000;
+  --color-primary-hover: #CC8E00;
+  --color-primary-alpha: rgba(229, 160, 0, 0.12);
+
+  /* Surfaces */
+  --color-surface-0: #FFFFFF;
+  --color-surface-1: #FAFAFA;
+  --color-surface-2: #F5F5F7;
+
+  /* Text */
+  --color-text-primary: #111111;
+  --color-text-secondary: #333333;
+  --color-text-tertiary: #888888;
+
+  /* Animations */
+  --animate-fade-in: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  --animate-fade-in-delay-1: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s forwards;
+  --animate-fade-in-delay-2: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4s forwards;
+  --animate-fade-in-delay-3: fadeIn 1s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6s forwards;
+  --animate-slide-down: slideDown 0.3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
