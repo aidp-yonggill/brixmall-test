@@ -1,4 +1,7 @@
 import HeroSection from './components/hero/HeroSection';
+import TrustSection from './components/trust/TrustSection';
+import TestimonialsSection from './components/trust/TestimonialsSection';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
@@ -19,6 +22,10 @@ function App() {
           </p>
         </div>
       </section>
+
+      <TrustSection />
+      <TestimonialsSection />
+      <Footer />
     </div>
   );
 }
